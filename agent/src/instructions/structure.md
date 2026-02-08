@@ -6,9 +6,8 @@ This document explains how to create and structure event files for the "Mémoire
 
 Events are stored as Markdown files within the `src/data` directory. The path must follow this convention:
 
-`src/data/[type]/[owner]/events/[year]/[YYYY-MM-DD]_[slug].md`
+`src/data/people/[owner]/events/[year]/[YYYY-MM-DD]_[slug].md`
 
-- **[type]**: Either `people` or `groups`.
 - **[owner]**: The unique identifier (ID) of the person or group (e.g., `mlepen`).
 - **[year]**: The year the event took place.
 - **[YYYY-MM-DD]**: The full date of the event. **This date is used as the primary source of truth for the event's date.**
@@ -53,7 +52,7 @@ Each category in the `categories` list must have:
 The body of the file (after the second `---`) contains the description of the event.
 - Use **Markdown** for styling (bold, lists, etc.).
 - Use the **@[id]** syntax to mention people or groups (e.g., `@mlepen`).
-- Keep the description factual and concise.
+- Keep the description factual, short and concise.
 
 ---
 

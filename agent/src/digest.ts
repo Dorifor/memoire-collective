@@ -58,7 +58,7 @@ ${ splitContent[2].trim() }
 catch (error) {
     console.log("Error while writing file.");
     console.log("---");
-    console.log(rawBody);
+    console.log(body);
     console.log("---");
     console.log(result);
     console.error(error);
