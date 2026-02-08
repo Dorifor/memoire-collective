@@ -17,7 +17,9 @@ Voici à quoi ressemble l'en-tête. Il est au format [YAML](https://fr.wikipedia
 ```md
 ---
 title: Condamnation pour détournement de fonds publics
-categories: justice/detournement
+categories:
+  - id: justice/detournement
+    reason: Condamnation pour détournement de fonds publics via un système de contrats fictifs d'assistants parlementaires européens.
 files: assistants-parlementaires-fn-parlement-europeen
 sources:
   - name: "Délibéré dossier"
@@ -29,11 +31,10 @@ sources:
 
 Différents champs peuvent être remplis :
 - `title` : Le titre de cet évènement
-- `categories` : La ou les catégories de cet évènement *(ici `justice/detournement`)*
+- `categories` : La ou les catégories de cet évènement. Chaque catégorie est un objet contenant un `id` (ex: `justice/detournement`) et un `reason` expliquant brièvement le choix de cette catégorie.
 - `sources` : La ou les sources
 - `files?` : La ou les affaires auxquelles cet évènement est lié
 - `links?` : Le ou les évènements liés à cet évènement
-- `summary?` : Un résumé de cet évènement
 - `timestamp?` : Une date précise de cet évènement (s'il doit être placé précisément dans la journée)
 
 Les propriétés avec un `?` sont optionnelles.

@@ -4,7 +4,7 @@ export const navigationItems: ArrayOrNested<NavigationMenuItem> = [
     {
         label: "Chronologie",
         icon: "lucide:calendars",
-        to: "/timeline/mlepen"
+        to: "/timeline"
     },
     {
         label: "Documentation",
