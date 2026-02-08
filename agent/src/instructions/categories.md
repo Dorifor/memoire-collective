@@ -13,6 +13,7 @@ Categories are structured in two levels:
 - **Multiple Categories**: An event can have any number of categories if multiple themes apply.
 - **Precision Rule**: If a precise category is assigned, the corresponding generic category **must not** be added. For example, if you assign `comportement/racisme`, do not add `comportement`.
 - **Generic Fallback**: Only use a generic category if the event fits the broad theme but none of the specific sub-categories apply.
+- **New Categories**: You can add new categories (generic and/or precise) if you find them fitting. However, they **must** represent bad behavior of political figures (e.g., ethical breaches, legal issues, governance failures).
 
 ---
 
