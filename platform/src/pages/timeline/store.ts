@@ -62,7 +62,7 @@ export const useTimelineStore = defineStore(
                 return true;
             }
 
-            return filters.value.some((filter) => event.categories?.some((category) => category.startsWith(filter)));
+            return filters.value.some((filter) => event.categories?.some((category) => category.id.startsWith(filter)));
         }
 
         return {
