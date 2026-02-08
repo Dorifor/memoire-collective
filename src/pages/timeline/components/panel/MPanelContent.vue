@@ -17,6 +17,16 @@
                 :source="source"
             />
         </div>
+        <h2>Git</h2>
+        <UButton
+            :href="event.gitUrl"
+            icon="lucide:pencil"
+            size="xs"
+            target="_blank"
+            variant="soft"
+        >
+            Éditer la source sur GitHub
+        </UButton>
     </div>
 </template>
 

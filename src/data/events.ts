@@ -40,6 +40,7 @@ export function fetchEvents() {
             ...attributes,
             body: markdown.parse(frontmatter.body),
             date,
+            gitUrl: `https://github.com/hugoattal/memoire-collective/edit/main/src/data${ eventKey.slice(1) }`,
             key
         });
     }

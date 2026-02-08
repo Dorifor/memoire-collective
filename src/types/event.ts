@@ -15,10 +15,10 @@ export type TEvent = {
     // Si cet événement est caché dans la timeline globale (si c'est une réponse à une personnalité par exemple)
     hidden?: boolean;
     // Les événements liés à celui-ci
-    links: TMaybeArray<string>;
+    links?: TMaybeArray<string>;
     // Les sources de cet événement
     sources: TMaybeArray<TSource>;
-    summary: string;
+    summary?: string;
     // Le timestamp de la journée pour placer cet événement par rapport à d'autres dans la même journée
     timestamp?: number;
 };
@@ -34,6 +34,7 @@ export type TFilledEvent = TEvent & {
     body: string;
     categories: Array<string>;
     date: Date;
+    gitUrl: string;
     key: string;
     links: Array<TSource>;
     sources: Array<TFilledSource>;
