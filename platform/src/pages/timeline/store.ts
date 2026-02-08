@@ -23,14 +23,20 @@ export const useTimelineStore = defineStore(
             await router.push({ query: { ...router.currentRoute.value.query, filter: filters.value.join(",") } });
         });
 
-        watch(() => route.params.person, (person) => {
-            selectedPerson.value = String(person);
+        watch(() => route.params.event, (event: string) => {
+            selectedEvent.value = event;
         }, {
             immediate: true
         });
 
-        watch(() => route.params.event, (event) => {
-            selectedEvent.value = event as string;
+        watch(() => route.params.person, (person: string) => {
+            if (/^[0-9]{4}/.test(person)) {
+                selectedEvent.value = person;
+                selectedPerson.value = "";
+                return;
+            }
+
+            selectedPerson.value = person;
         }, {
             immediate: true
         });

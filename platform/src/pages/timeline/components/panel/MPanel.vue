@@ -30,7 +30,7 @@ import { handleLinkClick } from "@/router/handle.ts";
 const timelineStore = useTimelineStore();
 const dataStore = useDataStore();
 
-const event = computed(() => dataStore.events["people"][timelineStore.selectedPerson]?.[timelineStore.selectedEvent]);
+const event = computed(() => dataStore.events.all?.[timelineStore.selectedEvent]);
 const openedPanel = ref(false);
 
 watch(event, () => {

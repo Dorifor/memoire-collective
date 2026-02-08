@@ -18,7 +18,7 @@ export async function processAi(instructions: {system: string, user: string}) {
         ],
     });
 
-    return chatResponse.choices![0].message.content;
+    return chatResponse.choices![0].message.content as string;
 }
 
 

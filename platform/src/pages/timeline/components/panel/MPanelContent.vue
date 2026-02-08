@@ -55,6 +55,12 @@ defineProps<{
         font-weight: 600;
         text-transform: uppercase;
     }
+
+    .content {
+        &:deep(p) {
+            margin: var(--length-s) 0;
+        }
+    }
 }
 
 .sources {

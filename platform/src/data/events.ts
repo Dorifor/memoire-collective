@@ -6,6 +6,7 @@ import type { TEvent, TFilledEvent, TSource } from "@/types/event.ts";
 export type TEvents = {
     groups: Record<string, Record<string, TFilledEvent>>;
     people: Record<string, Record<string, TFilledEvent>>;
+    all: Record<string, TFilledEvent>;
 };
 
 export function fetchEvents() {
@@ -13,7 +14,8 @@ export function fetchEvents() {
 
     const events: TEvents = {
         groups: {},
-        people: {}
+        people: {},
+        all: {}
     };
 
     for (const [eventKey, eventImport] of Object.entries(eventsImport)) {
@@ -36,14 +38,17 @@ export function fetchEvents() {
             source.date = new Date(source.date);
         }
 
-        set(events, [type, owner, key], {
+        const event = {
             ...attributes,
-            body: markdown.parse(frontmatter.body),
+            body: markdown.parse(frontmatter.body) as string,
             date,
             gitUrl: `https://github.com/hugoattal/memoire-collective/edit/main/platform/src/data${ eventKey.slice(1) }`,
             key,
             owner
-        });
+        };
+
+        set(events, [type, owner, key], event);
+        events.all[key] = event as TFilledEvent;
     }
 
     return events;

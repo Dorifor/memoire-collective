@@ -30,13 +30,13 @@ export type TFilledSource = {
 };
 
 export type TFilledEvent = TEvent & {
-    affairs: Array<TSource>;
+    affairs?: Array<TSource>;
     body: string;
-    categories: Array<string>;
+    categories?: Array<string>;
     date: Date;
     gitUrl: string;
     key: string;
-    links: Array<TSource>;
+    links?: Array<TSource>;
     owner: string;
     sources: Array<TFilledSource>;
 };
