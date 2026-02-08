@@ -37,5 +37,6 @@ export type TFilledEvent = TEvent & {
     gitUrl: string;
     key: string;
     links: Array<TSource>;
+    owner: string;
     sources: Array<TFilledSource>;
 };

@@ -5,7 +5,6 @@
         <MTimeline
             class="timeline"
             :events="eventsArray"
-            :person="person"
         />
         <MPanel class="panel" />
     </div>
@@ -23,13 +22,11 @@ import { useTimelineStore } from "@/pages/timeline/store.ts";
 const dataStore = useDataStore();
 const timelineStore = useTimelineStore();
 
-const person = computed(() => dataStore.people[timelineStore.selectedPerson]!);
-
 const eventsArray = computed(() => {
-    const events = dataStore.events["people"]?.[timelineStore.selectedPerson];
+    let events = dataStore.events["people"]?.[timelineStore.selectedPerson];
 
     if (!events) {
-        return [];
+        events = Object.values(dataStore.events["people"]).reduce((acc, value) => ({ ...acc, ...value }), {});
     }
 
     return Object.entries(events)

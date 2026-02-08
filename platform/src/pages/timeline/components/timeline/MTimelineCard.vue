@@ -1,13 +1,14 @@
 <template>
     <MCard
-        :avatar="person.photo"
+        v-if="owner"
+        :avatar="owner.photo"
         :body="event.body"
         class="card"
         :class="{selected}"
         :data-event="event.key"
         :date="event.date"
         :icon="icon"
-        :name="person.name"
+        :name="owner.name"
         :title="event.title"
         @click.stop="selectCard"
     >
@@ -30,18 +31,20 @@ import { capitalize } from "es-toolkit";
 import { computed } from "vue";
 
 import { categories } from "@/data/categories.ts";
+import { useDataStore } from "@/data/store.ts";
 import MCard from "@/pages/timeline/components/form/MCard.vue";
 import MTag from "@/pages/timeline/components/form/MTag.vue";
 import { useTimelineStore } from "@/pages/timeline/store.ts";
 import type { TFilledEvent } from "@/types/event.ts";
-import type { TPerson } from "@/types/people.ts";
-
-const timelineStore = useTimelineStore();
 
 const props = defineProps<{
     event: TFilledEvent;
-    person: TPerson;
 }>();
+
+const timelineStore = useTimelineStore();
+const dataStore = useDataStore();
+
+const owner = computed(() => dataStore.people[props.event.owner]);
 
 const icon = computed(() => {
     const category = (props.event.categories[0] ?? "").split("/")[0]!;

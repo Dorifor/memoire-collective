@@ -17,7 +17,6 @@
                 <MTimelineCard
                     v-else
                     :event="event"
-                    :person="person"
                 >
                     {{ event.title }}
                 </MTimelineCard>
@@ -32,11 +31,9 @@ import { computed } from "vue";
 import MTimelineCard from "@/pages/timeline/components/timeline/MTimelineCard.vue";
 import { useTimelineStore } from "@/pages/timeline/store.ts";
 import type { TFilledEvent } from "@/types/event.ts";
-import type { TPerson } from "@/types/people.ts";
 
 const props = defineProps<{
     events: Array<TFilledEvent>;
-    person: TPerson;
 }>();
 
 const timelineStore = useTimelineStore();

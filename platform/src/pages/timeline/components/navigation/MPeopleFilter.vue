@@ -13,7 +13,12 @@
                     :description="dataStore.groups[selectedPerson.group]?.name"
                     :name="selectedPerson?.name"
                 />
-                <UUser v-else />
+                <UUser
+                    v-else
+                    :avatar="{ icon: 'lucide:users' }"
+                    description="Afficher tous les événements"
+                    name="Tous"
+                />
             </UButton>
         </UDropdownMenu>
     </div>
@@ -30,17 +35,30 @@ import type { TPerson } from "@/types/people.ts";
 const dataStore = useDataStore();
 const timelineStore = useTimelineStore();
 
-const items = computed<Array<DropdownMenuItem>>(() => Object.entries(dataStore.people)
-    .map(([key, person]) => ({
-        label: person.name,
+const items = computed<Array<DropdownMenuItem>>(() => [
+    {
+        label: "Tous",
         avatar: {
-            src: person.photo
+            icon: "lucide:users"
         },
-        description: dataStore.groups[person.group]?.name,
+        description: "Afficher tous les événements",
         onSelect: async () => {
-            await timelineStore.setPerson(key);
+            await timelineStore.setPerson("");
         }
-    }))
+    },
+    ...Object.entries(dataStore.people)
+        .filter(([key]) => dataStore.events.people[key])
+        .map(([key, person]) => ({
+            label: person.name,
+            avatar: {
+                src: person.photo
+            },
+            description: dataStore.groups[person.group]?.name,
+            onSelect: async () => {
+                await timelineStore.setPerson(key);
+            }
+        }))
+]
 );
 
 const selectedPerson = computed<TPerson | undefined>(() => dataStore.people[timelineStore.selectedPerson]);

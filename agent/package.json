@@ -1,0 +1,22 @@
+{
+    "name": "@memoire-collective/agent",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "digest": "tsx --env-file=.env src/digest.ts"
+    },
+    "dependencies": {
+        "@mistralai/mistralai": "^1.14.0",
+        "es-toolkit": "^1.44.0",
+        "tsx": "^4.21.0"
+    },
+    "devDependencies": {
+        "@luna-park/eslint-config": "^1.0.3",
+        "@types/node": "^25.2.2",
+        "eslint": "^10.0.0",
+        "typescript": "~5.9.3",
+        "typescript-eslint": "^8.54.0",
+        "vite": "7.3.1"
+    }
+}

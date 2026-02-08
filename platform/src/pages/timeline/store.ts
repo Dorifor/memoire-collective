@@ -12,7 +12,7 @@ export const useTimelineStore = defineStore(
         const urlParams = new URLSearchParams(window.location.search);
 
         const filters = ref<Array<string>>([]);
-        const selectedPerson = ref<string>("mlepen");
+        const selectedPerson = ref<string>("");
         const selectedEvent = ref<string>("");
 
         if (urlParams.has("filter")) {
