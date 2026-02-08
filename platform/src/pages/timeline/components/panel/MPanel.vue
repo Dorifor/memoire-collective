@@ -47,8 +47,9 @@ whenever(() => !openedPanel.value, async () => await timelineStore.deselectEvent
 .panel {
     flex: 0 0 0;
     transition: flex-basis var(--transition-default);
-    overflow: hidden;
     padding: var(--length-m) var(--length-xl);
+    max-height: 80dvh;
+    overflow-y: scroll;
 
     &.open {
         border-left: 1px solid var(--ui-border);

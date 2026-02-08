@@ -1,6 +1,8 @@
 ---
 title: Condamnation pour détournement de fonds publics
-categories: justice/detournement
+categories:
+  - id: justice/detournement
+    reason: Condamnation pour détournement de fonds publics via un système de contrats fictifs d'assistants parlementaires européens.
 files: assistants-parlementaires-fn-parlement-europeen
 sources:
   - name: "Délibéré dossier"

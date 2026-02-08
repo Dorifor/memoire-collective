@@ -1,6 +1,8 @@
 ---
 title: "@mlepen entendue comme témoin assisté"
-categories: "justice/obstruction"
+categories:
+  - id: justice/obstruction
+    reason: Refus répété de se présenter aux juges avant d'être entendue sous le statut de témoin assisté.
 files: "rassemblement-national/jeanne"
 sources:
   - name: "Financement du FN : Marine Le Pen entendue comme témoin assisté"

@@ -1,8 +1,10 @@
 ---
 title: Proposition de ramener la Russie dans le concert européen et de rouvrir les gazoducs Nord Stream
 categories:
-  - opportunisme/discours
-  - desinformation/manipulation
+  - id: opportunisme/discours
+    reason: Plaidoyer pour un retour de la Russie dans le concert européen malgré le contexte d'agression en Ukraine.
+  - id: desinformation/manipulation
+    reason: Suggestion de référendums dans des territoires occupés militairement, ignorant les conditions de validité démocratique.
 sources:
   - name: "Mélenchon plaide pour ramener la Russie « dans le concert européen » et rouvrir les gazoducs Nord Stream"
     url: "https://www.lopinion.fr/politique/melenchon-plaide-pour-ramener-la-russie-dans-le-concert-europeen-et-rouvrir-les-gazoducs-nord-stream?utm=reload2"

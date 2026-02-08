@@ -6,10 +6,15 @@ export type TSource = {
     url: string;
 };
 
+export type TCategory = {
+    id: string;
+    reason: string;
+};
+
 export type TEvent = {
     title: string;
     // Les affaires liées à cet événement
-    categories?: TMaybeArray<string>;
+    categories?: TMaybeArray<TCategory>;
     content: string;
     files?: TMaybeArray<string>;
     // Si cet événement est caché dans la timeline globale (si c'est une réponse à une personnalité par exemple)
@@ -32,7 +37,7 @@ export type TFilledSource = {
 export type TFilledEvent = TEvent & {
     affairs?: Array<TSource>;
     body: string;
-    categories?: Array<string>;
+    categories?: Array<TCategory>;
     date: Date;
     gitUrl: string;
     key: string;

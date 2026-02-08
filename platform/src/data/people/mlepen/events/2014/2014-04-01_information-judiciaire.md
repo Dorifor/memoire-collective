@@ -1,8 +1,10 @@
 ---
 title: "Information judiciaire pour escroquerie en bande organisée"
 categories:
-  - "justice/escroquerie"
-  - "justice/obstruction"
+  - id: justice/escroquerie
+    reason: Information judiciaire pour escroquerie en bande organisée concernant les activités financières du micro-parti Jeanne.
+  - id: justice/obstruction
+    reason: Refus initial de se présenter aux convocations judiciaires.
 files: "rassemblement-national/jeanne"
 sources:
   - name: "Le microparti de Marine Le Pen visé par la justice"

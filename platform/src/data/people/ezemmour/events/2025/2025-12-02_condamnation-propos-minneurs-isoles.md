@@ -1,9 +1,12 @@
 ---
 title: Condamnation définitive pour propos haineux envers les mineurs isolés
 categories:
-  - justice
-  - comportement/haine
-  - comportement/racisme
+  - id: justice
+    reason: Condamnation définitive par la Cour de cassation pour provocation à la haine.
+  - id: comportement/haine
+    reason: Propos violents et généralisateurs envers les mineurs isolés.
+  - id: comportement/racisme
+    reason: Stigmatisation d'une catégorie de population basée sur son origine et son statut.
 sources:
   - name: "« Ils sont voleurs, ils sont assassins, ils sont violeurs » : Éric Zemmour définitivement condamné pour ses propos sur les mineurs isolés"
     url: "https://www.leparisien.fr/faits-divers/ils-sont-voleurs-ils-sont-assassins-ils-sont-violeurs-eric-zemmour-definitivement-condamne-pour-ses-propos-sur-les-mineurs-isoles-02-12-2025-PH5K4MD5CNB63C67BS4BPTL5F4.php"

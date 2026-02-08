@@ -1,6 +1,8 @@
 ---
 title: Confirmation du jugement par la Cour de cassation
-categories: justice/condamnation
+categories:
+  - id: justice/detournement
+    reason: Condamnation définitive pour recel d'abus de biens sociaux et détournement de fonds publics dans l'affaire des kits de campagne.
 files: "rassemblement-national/jeanne"
 sources:
   - name: "La Cour de cassation confirme la condamnation du Rassemblement national dans l'affaire des kits de campagne"

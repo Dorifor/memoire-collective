@@ -42,26 +42,32 @@ Broad category for personal enrichment or undue influence.
 - `conflit/mandats`: Accumulation of mandates (Cumul des mandats).
 - `conflit/remuneration`: Excessive remuneration.
 
-### 4. Mensonges et désinformation (`desinformation`)
+### 4. Ingérence et influence étrangère (`influence`)
+Broad category for actions serving foreign interests or linked to foreign powers.
+- `influence/financement`: Controversial financing from foreign entities or interests.
+- `influence/politique`: Supporting foreign policies against national interests or universal values.
+- `influence/services`: Suspected or proven links with foreign intelligence services.
+
+### 5. Mensonges et désinformation (`desinformation`)
 Broad category for manipulation of information.
 - `desinformation/fakeNews`: Fake news.
 - `desinformation/manipulation`: Manipulation of opinion.
 - `desinformation/promesses`: Unkept promises.
 
-### 5. Incompétence et irresponsabilité (`incompetence`)
+### 6. Incompétence et irresponsabilité (`incompetence`)
 Broad category for failures in governance or accountability.
 - `incompetence/clientelisme`: Clientelism.
 - `incompetence/echecs`: Refusal to take responsibility for failures.
 - `incompetence/erreur`: Serious errors/negligence.
 - `incompetence/favoritisme`: Favoritism.
 
-### 6. Mépris des institutions (`institutions`)
+### 7. Mépris des institutions (`institutions`)
 Broad category for subverting legal or institutional processes.
 - `institutions/ingerence`: Interference in justice.
 - `institutions/lois`: Changing laws for private interests.
 - `institutions/regles`: Bypassing rules/procedures.
 
-### 7. Affaires judiciaires (`justice`)
+### 8. Affaires judiciaires (`justice`)
 Broad category for legal and criminal matters.
 - `justice/corruption`: Corruption.
 - `justice/detournement`: Embezzlement of public funds.
@@ -69,11 +75,11 @@ Broad category for legal and criminal matters.
 - `justice/fraude`: Tax fraud.
 - `justice/obstruction`: Obstruction of justice.
 
-### 8. Népotisme et copinage (`nepotisme`)
+### 9. Népotisme et copinage (`nepotisme`)
 Broad category for favoritism towards family or friends.
 - `nepotisme/emploi`: Nepotism in employment.
 
-### 9. Opportunisme et double discours (`opportunisme`)
+### 10. Opportunisme et double discours (`opportunisme`)
 Broad category for political inconsistency or populism.
 - `opportunisme/discours`: Double language.
 - `opportunisme/ideologie`: Ideological inconsistency.

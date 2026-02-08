@@ -1,6 +1,8 @@
 ---
 title: "@mlepen conteste son retrait de permis et oublie de payer son avocat"
-categories: justice
+categories:
+  - id: justice
+    reason: Contentieux administratif et pénal lié à des infractions routières et un impayé d'honoraires d'avocat.
 sources:
   - name: "Marine Le Pen conteste son retrait de permis et oublie de payer son avocat"
     url: "https://www.europe1.fr/politique/Marine-Le-Pen-conteste-son-retrait-de-permis-et-oublie-de-payer-son-avocat-792112"

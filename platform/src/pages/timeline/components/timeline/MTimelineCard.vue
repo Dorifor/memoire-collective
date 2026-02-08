@@ -17,23 +17,19 @@
                 v-for="(category, index) in event.categories"
                 :key="index"
             >
-                <MTag
-                    :icon="categories[category.split('/')[0]!]?.icon"
-                    :label="capitalize(category.split('/').at(-1)!)"
-                />
+                <MCategoryTag :category-id="category.id" />
             </template>
         </template>
     </MCard>
 </template>
 
 <script setup lang="ts">
-import { capitalize } from "es-toolkit";
 import { computed } from "vue";
 
 import { categories } from "@/data/categories.ts";
 import { useDataStore } from "@/data/store.ts";
 import MCard from "@/pages/timeline/components/form/MCard.vue";
-import MTag from "@/pages/timeline/components/form/MTag.vue";
+import MCategoryTag from "@/pages/timeline/components/form/MCategoryTag.vue";
 import { useTimelineStore } from "@/pages/timeline/store.ts";
 import type { TFilledEvent } from "@/types/event.ts";
 
@@ -47,7 +43,7 @@ const dataStore = useDataStore();
 const owner = computed(() => dataStore.people[props.event.owner]);
 
 const icon = computed(() => {
-    const category = (props.event.categories?.[0] ?? "").split("/")[0]!;
+    const category = (props.event.categories?.[0]?.id ?? "").split("/")[0]!;
     return categories[category]?.icon;
 });
 

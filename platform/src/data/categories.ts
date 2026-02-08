@@ -82,6 +82,24 @@ export const categories: Record<string, TCategory> = {
             }
         }
     },
+    influence: {
+        name: "Ingérence et influence étrangère",
+        icon: "lucide:globe",
+        children: {
+            financement: {
+                name: "Financement étranger controversé",
+                description: "Réception de fonds de la part de puissances ou d'entités étrangères dans des conditions opaques ou contestables."
+            },
+            politique: {
+                name: "Soutien aux intérêts étrangers",
+                description: "Prises de position ou actions favorisant les intérêts d'une puissance étrangère au détriment de l'intérêt national ou de valeurs universelles."
+            },
+            services: {
+                name: "Liens avec des services de renseignement",
+                description: "Contacts ou collaborations (suspectés ou avérés) avec des services secrets étrangers."
+            }
+        }
+    },
     desinformation: {
         name: "Mensonges et désinformation",
         icon: "lucide:tv",

@@ -1,9 +1,12 @@
 ---
 title: Condamnation à 10 000 euros d’amende pour injure et provocation à la haine
 categories:
-  - justice
-  - comportement/haine
-  - comportement/islamophobie
+  - id: justice
+    reason: Condamnation pénale pour injure et provocation à la haine.
+  - id: comportement/haine
+    reason: Propos ciblant l'islam et l'immigration qualifiés d'exhortation à la haine.
+  - id: comportement/islamophobie
+    reason: Discours visant spécifiquement la communauté musulmane.
 sources:
   - name: "Eric Zemmour condamné à 10 000 euros d’amende pour injure et provocation à la haine"
     url: "https://www.lemonde.fr/societe/article/2020/09/25/eric-zemmour-condamne-a-10-000-euros-d-amende-pour-injure-et-provocation-a-la-haine_6053635_3224.html"

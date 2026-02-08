@@ -1,6 +1,9 @@
 import * as cheerio from "cheerio";
 import { chromium } from "playwright";
 
+import { processAi } from "@/ai.ts";
+import { instructions } from "@/instructions";
+
 export async function scrapUrl(url: string) {
     const browser = await chromium.launch();
     const page = await browser.newPage();
@@ -10,7 +13,7 @@ export async function scrapUrl(url: string) {
     return content;
 }
 
-export function cleanHtml(html: string) {
+export function tidyHtml(html: string) {
     const $ = cheerio.load(html);
 
     $("script, noscript, meta, style").remove();
@@ -64,4 +67,12 @@ export function cleanHtml(html: string) {
         .join("\n")
         .replace(/\n{2,}/g, "\n")
         .trim();
+}
+
+export async function getCleanHtml(url: string) {
+    console.log("Scraping...");
+    const rawBody = tidyHtml(await scrapUrl(url));
+
+    console.log("Cleaning...");
+    return await processAi({ system: instructions.clean, user: rawBody });
 }

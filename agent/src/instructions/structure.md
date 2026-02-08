@@ -29,7 +29,7 @@ The YAML header defines the metadata of the event.
 | Property | Type | Required | Description |
 | :--- | :--- | :--- | :--- |
 | `title` | `string` | **Yes** | A concise and descriptive title. |
-| `categories` | `string` \| `string[]` | No | Categories assigned to the event. Follow the rules in `categories.md`. |
+| `categories` | `TCategories[]` | No | Categories assigned to the event. Follow the rules in `categories.md`. |
 | `files` | `string` \| `string[]` | No | IDs of "affaires" (legal cases or files) linked to this event. |
 | `links` | `string` \| `string[]` | No | IDs of other events (filename slugs) linked to this event. |
 | `sources` | `TSource[]` | **Yes** | A list of verifiable sources. |
@@ -37,9 +37,16 @@ The YAML header defines the metadata of the event.
 #### TSource Structure
 
 Each source in the `sources` list must have:
-- `name`: The name of the media or document (e.g., "Mediapart").
+- `name`: The name of the article or document.
 - `url`: A direct link to the information.
 - `date`: The publication date of the source in `YYYY/MM/DD` format.
+
+#### TCategories Structure
+
+Each category in the `categories` list must have:
+- `id`: The category identifier (e.g., `justice/detournement`).
+- `reason`: A short sentence to explain why this event is linked to that category.
+
 
 ### 2. Markdown Content
 
@@ -57,10 +64,12 @@ The body of the file (after the second `---`) contains the description of the ev
 ```markdown
 ---
 title: Condamnation pour détournement de fonds publics
-categories: justice/detournement
+categories:
+  - id: justice/detournement
+    reason: L'événement concerne une condamnation judiciaire pour détournement de fonds.
 files: assistants-parlementaires-fn-parlement-europeen
 sources:
-  - name: "Délibéré dossier"
+  - name: "Délibéré dossier dit des assistants fictifs du RN"
     url: "https://infographics.mediapart.fr/hubs/assets/documents/proces-le-pen/attendus-jugement-rn-31-mars.pdf"
     date: "2025/03/31"
 ---

@@ -10,10 +10,17 @@
 </template>
 
 <script setup lang="ts">
+import { capitalize } from "es-toolkit";
+import { computed } from "vue";
+
+import { categories } from "@/data/categories.ts";
+
 const props = defineProps<{
-    label: string;
-    icon?: string;
+    categoryId: string;
 }>();
+
+const icon = computed(() => categories[props.categoryId.split("/")[0]!]?.icon);
+const label = computed(() => capitalize(props.categoryId.split("/").at(-1)!));
 </script>
 
 <style scoped>

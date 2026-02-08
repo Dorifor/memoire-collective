@@ -1,6 +1,8 @@
 ---
 title: "Création du micro-parti Jeanne"
-categories: "financement"
+categories:
+  - id: influence/financement
+    reason: Création d'une structure de financement qui deviendra centrale pour les campagnes du parti.
 files: "rassemblement-national/jeanne"
 hidden: true
 sources:

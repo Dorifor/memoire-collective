@@ -1,9 +1,11 @@
 ---
 title: Le conseil d'état rejette le recours de @mlepen
-categories: justice
+categories:
+  - id: justice
+    reason: Confirmation de la perte du mandat électoral suite à une peine d'inéligibilité exécutoire.
 files: assistants-parlementaires-fn-parlement-europeen
 sources:
-  - name: "Conseil d'Etat"
+  - name: "Exécution provisoire d’une peine d’inéligibilité : le Conseil d’État confirme la démission d’office de Mme Marine Le Pen de son mandat de conseillère départementale"
     url: "https://www.conseil-etat.fr/actualites/execution-provisoire-d-une-peine-d-ineligibilite-le-conseil-d-etat-confirme-la-demission-d-office-de-mme-marine-le-pen-de-son-mandat-de-conseille"
     date: "2025/11/10"
 
