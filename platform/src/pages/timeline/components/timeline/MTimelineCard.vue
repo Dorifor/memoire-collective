@@ -47,7 +47,7 @@ const dataStore = useDataStore();
 const owner = computed(() => dataStore.people[props.event.owner]);
 
 const icon = computed(() => {
-    const category = (props.event.categories[0] ?? "").split("/")[0]!;
+    const category = (props.event.categories?.[0] ?? "").split("/")[0]!;
     return categories[category]?.icon;
 });
 
