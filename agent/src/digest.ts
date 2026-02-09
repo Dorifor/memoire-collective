@@ -18,7 +18,8 @@ else {
 
 console.log("Processing...");
 let result = await processAi({
-    system: `You are an expert at extracting information from web pages.
+    system: `Your role and mission:
+${ instructions.role }
 
 Follow this output structure:
 ${ instructions.structure }
@@ -28,6 +29,7 @@ ${ instructions.categories }
 
 Follow exactly this exact formatting for the output:
 ${ instructions.format }`,
+
     user: `Extract information from the following content (url: ${ url }):
 ${ body }`
 });
