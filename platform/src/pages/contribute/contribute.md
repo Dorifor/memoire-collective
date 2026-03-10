@@ -2,9 +2,9 @@ Si vous êtes intéressé par le projet, la meilleure chose à faire est de rejo
 
 ## Créer un évènement
 
-Les évènements sont des fichiers texte au format YAML et Markdown. Voici un exemple : [2025-03-31_condamnation.md](https://github.com/hugoattal/memoire-collective/edit/main/platform/src/data/people/mlepen/events/2025/2025-03-31_condamnation.md).
+Les évènements sont des fichiers texte au format YAML et Markdown. Voici un exemple : [2025-03-31_condamnation.md](https://github.com/hugoattal/memoire-collective/blob/main/platform/src/data/people/mlepen/events/2025/2025-03-31_condamnation.md?plain=1).
 
-Un évènement est définis par quatre éléments :
+Un évènement est défini par quatre éléments :
 - son emplacement *(qui définit à qui/quoi il se rattache, ici `people/mlepen/events/2025`)*
 - son titre *(qui contient sa date exacte et son identifiant, ici `2025-03-31_condamnation`)*
 - son en-tête *(qui définit ses propriétés, comme son titre, ses sources, etc...)*
